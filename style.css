@@ -1,0 +1,75 @@
+:root{--bg:#1c1b1a;--fg:#d3d0ca;--muted:#9d9a94;--card:#262523;--line:#3a3836;--gold:#c9a96e;--on:#1c1b1a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--bg)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.7 "Open Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.02em;margin:0;line-height:.95}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(28,27,26,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav b{font:400 26px "Bebas Neue",Impact,sans-serif;letter-spacing:.05em}
+nav div{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+nav a{text-decoration:none;color:var(--muted);transition:.2s}nav a:hover{color:var(--gold)}
+section{padding:100px 5vw;max-width:1120px;margin:0 auto}
+.label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+h2{font-size:clamp(50px,9vw,96px);margin-bottom:44px}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero::before{content:"";position:absolute;right:-10%;top:10%;width:55vw;height:55vw;max-width:620px;max-height:620px;background:radial-gradient(circle,rgba(201,169,110,.16),transparent 65%);pointer-events:none}
+.hero h1{font-size:clamp(100px,24vw,280px)}
+.hero h1 span{display:block;margin-left:16vw;color:transparent;-webkit-text-stroke:2px var(--fg)}
+.hero p{max-width:560px;color:var(--muted);margin:26px 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border:1px solid var(--gold);text-decoration:none;font-weight:600;font-size:15px;transition:.25s}
+.btn.fill{background:var(--gold);color:var(--on)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,169,110,.2)}
+.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0}
+.marquee div{text-align:center;font:400 28px "Bebas Neue",Impact,sans-serif;letter-spacing:.08em;color:var(--muted)}
+.marquee i{color:var(--gold);font-style:normal;margin:0 22px}
+@keyframes slide{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:50px}
+.stat{border:1px solid var(--line);background:var(--card);padding:22px}
+.stat b{display:block;font:400 54px "Bebas Neue",Impact,sans-serif;color:var(--gold);line-height:1}
+.stat span{font-size:13px;color:var(--muted)}
+.tl{position:relative;padding-left:34px;border-left:1px solid var(--line);margin-left:8px}
+.step{position:relative;margin-bottom:46px}
+.step::before{content:"";position:absolute;left:-42px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.step small{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.step h3{font-size:42px;margin:6px 0 10px}
+.step p{color:var(--muted);margin:0 0 10px;max-width:760px}
+.quote{font:400 clamp(28px,5vw,46px) "Bebas Neue",Impact,sans-serif;color:var(--gold);margin-top:20px;line-height:1.05}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px}
+.cols h3{font-size:36px;margin-bottom:18px}
+.soft{display:flex;flex-wrap:wrap;gap:10px}
+.soft div{border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:14px;flex:1 1 240px}
+.soft b{display:block;color:var(--gold);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.bar{margin-bottom:20px}
+.bar p{display:flex;justify-content:space-between;margin:0 0 6px;font-weight:600;font-size:15px}
+.bar p em{font-style:normal;color:var(--muted);font-weight:400;font-size:13px}
+.bar div{height:5px;background:var(--line)}
+.bar div i{display:block;height:100%;background:var(--gold);width:0;transition:width 1.2s ease}
+.bar small{color:var(--muted);font-size:13px}
+.comp{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;padding:44px 0;border-top:1px solid var(--line)}
+.comp .id h3{font-size:clamp(52px,8vw,84px)}
+.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:3px 14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.id p{color:var(--muted);font-size:14px;margin:12px 0 0}
+.body h4{margin:18px 0 6px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.body h4:first-child{margin-top:0}
+.body p{margin:0;color:var(--fg);font-size:15.5px}
+.body ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}.body li{margin:5px 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chips span{border:1px solid var(--line);background:var(--card);padding:3px 12px;font-size:12.5px;color:var(--muted)}
+pre{background:#141312;border:1px solid var(--line);padding:16px;overflow-x:auto;font-size:13px;line-height:1.55;color:#cfcac0;margin:14px 0 0}
+pre .k{color:var(--gold)}pre .c{color:#7d7a74}
+.perf{margin-top:16px}
+.perf div{display:grid;grid-template-columns:90px 1fr 90px;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin:6px 0}
+.perf div span{height:10px;background:var(--line);display:block}
+.perf div span i{display:block;height:100%;background:var(--gold);width:0;transition:width 1.2s ease}
+.perf small{color:var(--muted);font-size:12px}
+.contact{text-align:center;padding-bottom:120px}
+.contact h2{font-size:clamp(60px,12vw,140px)}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 30px}
+.contact .btns{justify-content:center}
+footer{text-align:center;padding:30px 5vw;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+@media(max-width:760px){.comp{grid-template-columns:1fr;gap:20px}section{padding:70px 5vw}.hero h1 span{margin-left:8vw}}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}.rv{opacity:1;transform:none}}
